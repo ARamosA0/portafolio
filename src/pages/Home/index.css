@@ -6,12 +6,11 @@
 .navabar-principal{
     display: flex;
     flex-direction: column;
-    height: 80vh;
     background-color: #2C2D32;
 }
 
 .navbar{
-    margin:10px 30px 0 30px; 
+    margin:10px 50px 0 50px; 
     display: flex;
     justify-content: space-between;
 
@@ -49,7 +48,21 @@ a{
 }
 
 
+
+
+.container-titulo-navbar{
+    margin:50px 30px;
+}
+
+
+
+
+/* SECTION PORTAFOLIO */
+
 .section-portafolio{
-    height: 100vh;
     background-color: #323338;
+}
+
+.titulo-descripcion-titulo-tipo{
+    color:#ffc107;
 }
