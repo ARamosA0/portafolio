@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Grid, Divider, SxProps } from "@mui/material";
+import { Container, Grid, Divider, SxProps, Card, CardContent } from "@mui/material";
 
 import "./index.css";
 
@@ -10,11 +10,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Buttons
 import ColorButton from "../../components/ColorButtons";
-import CustomizedButtons from "../../components/ColorButtons";
 
-const style: SxProps = {
-    marginTop:10,
-} ;
+// Card
+import OutputCard from "../../components/Cards"
+
+
 
 
 const Home = () => {
@@ -57,7 +57,7 @@ const Home = () => {
                 <h2 style={{color:'#fff'}}>Ramos</h2>
               </p>
               <Divider />
-              <CustomizedButtons sx={style}></CustomizedButtons>
+              <ColorButton></ColorButton>
             </Grid>
             <Grid item xs={5} className="titulo-imagen">
               <img src="" alt="" />
@@ -69,7 +69,7 @@ const Home = () => {
                 <h1 style={{color:'#fff', marginTop:10}}>
                   FULLSTACK DEVELOPER
                 </h1>
-                <p style={{color:'#fff', marginTop:10}}>
+                <p style={{color:'#fff', marginTop:10, width:400}}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Sapiente minus, vel eligendi ipsam fuga maxime deserunt
                   accusantium alias quia nostrum esse, expedita mollitia
@@ -83,15 +83,20 @@ const Home = () => {
         </div>
       </nav>
       <section className="section-portafolio">
-        <div>
-          <h6>Tecnologias</h6>
-          <h3>Que Tecnologias Domino?</h3>
-          <p>
+        <div className="section-portafolio-tecnologias" >
+          <h6 className="titulo-descripcion-titulo-tipo" style={{marginTop:60}}>Tecnologias</h6>
+          <h2 style={{color:'#fff', marginTop:20}}>Que Tecnologias Domino?</h2>
+          <p style={{color:'#fff', width:700, textAlign:'center', marginTop:20}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et
             nesciunt unde, nulla soluta eum, neque voluptatem fuga pariatur modi
             hic repudiandae cum. Similique debitis officia molestias voluptates
             sapiente nam?
           </p>
+          <Grid container>
+            <Grid item xs={3}>
+                <OutputCard></OutputCard>
+            </Grid>
+          </Grid>
         </div>
       </section>
     </>

@@ -1,68 +1,70 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.navabar-principal{
+.navabar-principal {
     display: flex;
     flex-direction: column;
     background-color: #2C2D32;
 }
 
-.navbar{
-    margin:10px 50px 0 50px; 
+.navbar {
+    margin: 10px 50px 0 50px;
     display: flex;
     justify-content: space-between;
-
 }
 
-.navbar-logo{
+.navbar-logo {
     color: rgb(182, 153, 24);
     font-size: 2.5em;
 }
 
-.navbar-lista-ul{
+.navbar-lista-ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.navbar-lista-li{
+.navbar-lista-li {
     margin: 0 10px;
     text-decoration: none;
     color: #fff;
 }
 
-.navbar-icons{
+.navbar-icons {
     display: flex;
     align-items: center;
 }
 
-.navbar-icon-icon{
+.navbar-icon-icon {
     margin-left: 10px;
 }
 
-
-
-
-.container-titulo-navbar{
-    margin:50px 30px;
+.container-titulo-navbar {
+    margin: 50px 30px;
 }
 
-
+.titulo-descripcion-titulo-tipo {
+    color: #ffc107;
+}
 
 
 /* SECTION PORTAFOLIO */
 
-.section-portafolio{
+.section-portafolio {
     background-color: #323338;
 }
 
-.titulo-descripcion-titulo-tipo{
-    color:#ffc107;
+.section-portafolio-tecnologias {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
