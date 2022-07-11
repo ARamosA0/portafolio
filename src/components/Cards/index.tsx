@@ -1,30 +1,46 @@
-import * as React from 'react';
-import { Card, CardContent, CardActions,Grid } from "@mui/material";
+// import {useState, useEffect} from 'react';
+// import { Card, CardContent, CardActions,Grid } from "@mui/material";
 
-import logohtml from '../../assets/html5.png'
-
-import './index.css'
+// import { getInfo } from '../../services/firebase';
 
 
-const card = (
-    <React.Fragment>
-        <Grid className='card-container'>
-            <CardContent className='card-content' style={{backgroundColor:'#2c2d32'}}>
-                <img src={logohtml} alt="logohtml5" className='logo' />
-                <h4>Web Developer</h4>
-            </CardContent>
+// import './index.css'
 
-        </Grid>
-    </React.Fragment>
-);
 
-const OutputCard = () => {
-    return (
-        <Card variant="outlined" style={{ border: 'none' }}>{card}</Card>
-    );
-};
 
-export default OutputCard;
+// const OutputCard = () => {
+
+//     const [info, setInfo] = useState<any>([]);
+
+//     const fetchFirebase = async () => {
+//         const infoPortafolio = await getInfo();
+//         setInfo(infoPortafolio);
+//     }
+
+//     useEffect(() => {
+//         fetchFirebase();
+//     })
+
+//     return (
+//         <>
+//         {info.length > 0 && 
+//             info.map((item: any) => (
+//                 item.tecn.forEach((t:any,index:number)=>(
+//                     <Card key={index}  variant="outlined" style={{ border: 'none' }}>
+//                         <Grid className='card-container'>
+//                             <CardContent className='card-content' style={{backgroundColor:'#2c2d32'}}>
+//                                 <img src={t.img} alt="logohtml5" className='logo' />
+//                                 <h4>{t.tec}</h4>
+//                             </CardContent>
+//                         </Grid>
+//                     </Card>
+//                 ))
+//         ))}
+//         </>
+//     );
+// };
+
+// export default OutputCard;
 
 
 
