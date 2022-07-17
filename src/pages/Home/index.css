@@ -44,6 +44,12 @@ a {
 
 .navbar-icon-icon {
     margin-left: 10px;
+    color: #45464b;
+}
+
+.navbar-icon-icon:hover {
+    margin-left: 10px;
+    color: #6c6d70;
 }
 
 .container-titulo-navbar {
@@ -89,6 +95,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
 }       
 
 .section-proyectos-proyectos{
@@ -104,4 +111,5 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 70px;
 }
