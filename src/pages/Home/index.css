@@ -48,6 +48,15 @@ a {
 
 .container-titulo-navbar {
     margin: 50px 30px;
+    padding: 50px;
+    display: flex;
+    align-items: center;;
+}
+
+.titulo-imagen img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
 }
 
 .titulo-descripcion-titulo-tipo {
@@ -63,6 +72,34 @@ a {
 
 .section-portafolio-tecnologias {
     margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+/* PROYECTOS */
+.section-proyectos{
+    background-color: #2C2D32;
+}
+
+.section-proyectos-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}       
+
+.section-proyectos-proyectos{
+    margin: 30px;
+}
+
+.section-contact-main{
+    background-color: #323338;
+}
+
+.section-contact-container{
     display: flex;
     flex-direction: column;
     justify-content: center;

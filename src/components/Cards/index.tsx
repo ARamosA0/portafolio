@@ -1,46 +1,169 @@
-// import {useState, useEffect} from 'react';
-// import { Card, CardContent, CardActions,Grid } from "@mui/material";
+import {useState, useEffect} from 'react';
+import { Card, CardContent, CardMedia,CardActions,Grid,Typography } from "@mui/material";
 
-// import { getInfo } from '../../services/firebase';
+import { getInfo } from '../../services/firebase';
+
+import sitioweb from '../../assets/sitioweb.png';
+
+import './index.css'
 
 
-// import './index.css'
+export const OutputCard = () => {
+    return (
+        <Grid container spacing={2} className='card-container-principal'>
+            <Grid item xs={3}>
+                <Card variant="outlined" style={{ border: 'none' }} sx={{ maxWidth: 345 }}>
+                    <CardMedia
+                        component="img"
+                        height="250"
+                        image={sitioweb}
+                        alt="logo"
+                        sx={{width:200, height:200, display:"flex", justifyContent:"center", alignItems:"center"}}>
+                    </CardMedia>
+                        <CardActions className='card-container' style={{backgroundColor:'#2c2d32'}}>
+                            <Typography variant="h5" color="#fff" sx={{fontWeight:700}}>
+                                LANAGUAGE
+                            </Typography>
+                        </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={3}>
+                <Card variant="outlined" style={{ border: 'none' }} sx={{ maxWidth: 345 }}>
+                    <CardMedia
+                        component="img"
+                        height="250"
+                        image={sitioweb}
+                        alt="logo"
+                        sx={{width:200, height:200, display:"flex", justifyContent:"center", alignItems:"center"}}>
+                    </CardMedia>
+                        <CardActions className='card-container' style={{backgroundColor:'#2c2d32'}}>
+                            <Typography variant="h5" color="#fff" sx={{fontWeight:700}}>
+                                FRAMEWORKS
+                            </Typography>
+                        </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={3}>
+                <Card variant="outlined" style={{ border: 'none' }} sx={{ maxWidth: 345 }}>
+                    <CardMedia
+                        component="img"
+                        height="250"
+                        image={sitioweb}
+                        alt="logo"
+                        sx={{width:200, height:200, display:"flex", justifyContent:"center", alignItems:"center"}}>
+                    </CardMedia>
+                        <CardActions className='card-container' style={{backgroundColor:'#2c2d32'}}>
+                            <Typography variant="h5" color="#fff" sx={{fontWeight:700}}>
+                                DATABASES
+                            </Typography>
+                        </CardActions>
+                </Card>
+            </Grid>
+        </Grid>
+    );
+};
 
 
+export const OutputCardLenguaje = () => {
+    const [info, setInfo] = useState<any>([]);
+    const fetchFirebase = async () => {
+        const infoPortafolio = await getInfo();
+        setInfo(infoPortafolio);
+    }
+    useEffect(() => {
+        fetchFirebase();
+    })
+    return (
+        <Grid container spacing={2}>
+        {info.length > 0 && 
+            info[0].tecn.map((item:any,index:number) => (
+                    <Grid key={index} item xs={3}>
+                        <Card variant="outlined" style={{ border: 'none' }} sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                height="100"
+                                // image={item.img}
+                                alt="logo">
+                            </CardMedia>
+                                <CardContent className='card-container' style={{backgroundColor:'#2c2d32'}}>
+                                    <Typography variant="h5" color="#fff">
+                                    {item.tec}
+                                    </Typography>
+                                </CardContent>
+                        </Card>
+                    </Grid>
+        ))}
+        </Grid>
+    );
+};
 
-// const OutputCard = () => {
+export const OutputCardFrameworks = () => {
+    const [info, setInfo] = useState<any>([]);
+    const fetchFirebase = async () => {
+        const infoPortafolio = await getInfo();
+        setInfo(infoPortafolio);
+    }
+    useEffect(() => {
+        fetchFirebase();
+    })
+    return (
+        <Grid container spacing={2}>
+        {info.length > 0 && 
+            info[0].tecn.map((item:any,index:number) => (
+                    <Grid key={index} item xs={3}>
+                        <Card variant="outlined" style={{ border: 'none' }} sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                height="100"
+                                // image={item.img}
+                                alt="logo">
+                            </CardMedia>
+                                <CardContent className='card-container' style={{backgroundColor:'#2c2d32'}}>
+                                    <Typography variant="h5" color="#fff">
+                                    {item.tec}
+                                    </Typography>
+                                </CardContent>
+                        </Card>
+                    </Grid>
+        ))}
+        </Grid>
+    );
+}
 
-//     const [info, setInfo] = useState<any>([]);
+export const OutputCardDataBase = () => {
+    const [info, setInfo] = useState<any>([]);
+    const fetchFirebase = async () => {
+        const infoPortafolio = await getInfo();
+        setInfo(infoPortafolio);
+    }
+    useEffect(() => {
+        fetchFirebase();
+    })
+    return (
+        <Grid container spacing={2}>
+        {info.length > 0 && 
+            info[0].tecn.map((item:any,index:number) => (
+                    <Grid key={index} item xs={3}>
+                        <Card variant="outlined" style={{ border: 'none' }} sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                component="img"
+                                height="100"
+                                // image={item.img}
+                                alt="logo">
+                            </CardMedia>
+                                <CardContent className='card-container' style={{backgroundColor:'#2c2d32'}}>
+                                    <Typography variant="h5" color="#fff">
+                                    {item.tec}
+                                    </Typography>
+                                </CardContent>
+                        </Card>
+                    </Grid>
+        ))}
+        </Grid>
+    );
+}
 
-//     const fetchFirebase = async () => {
-//         const infoPortafolio = await getInfo();
-//         setInfo(infoPortafolio);
-//     }
 
-//     useEffect(() => {
-//         fetchFirebase();
-//     })
-
-//     return (
-//         <>
-//         {info.length > 0 && 
-//             info.map((item: any) => (
-//                 item.tecn.forEach((t:any,index:number)=>(
-//                     <Card key={index}  variant="outlined" style={{ border: 'none' }}>
-//                         <Grid className='card-container'>
-//                             <CardContent className='card-content' style={{backgroundColor:'#2c2d32'}}>
-//                                 <img src={t.img} alt="logohtml5" className='logo' />
-//                                 <h4>{t.tec}</h4>
-//                             </CardContent>
-//                         </Grid>
-//                     </Card>
-//                 ))
-//         ))}
-//         </>
-//     );
-// };
-
-// export default OutputCard;
 
 
 
