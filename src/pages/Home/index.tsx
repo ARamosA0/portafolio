@@ -16,7 +16,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ColorButton from "../../components/ColorButtons";
 
 // Card
-import {OutputCard,OutputCardLenguaje, OutputCardFrameworks, OutputCardDataBase} from "../../components/Cards"
+import {OutputCard} from "../../components/Cards"
 
 // ImageList
 import ImageList from '@mui/material/ImageList';
@@ -127,18 +127,18 @@ const Home = () => {
           <h1 className="navbar-logo">AR</h1>
           <div className="navbar-lista-div">
             <ul className="navbar-lista-ul">
-              <Link to={`/`}>
+              <a href={`#info`}>
                 <li className="navbar-lista-li">Home</li>
-              </Link>
-              <Link to={`/`}>
-                <li className="navbar-lista-li">Portafolio</li>
-              </Link>
-              <Link to={`/`}>
+              </a>
+              <a href={`#tecnologias`}>
+                <li className="navbar-lista-li">Tecnologias</li>
+              </a>
+              <a href={`#proyectos`}>
                 <li className="navbar-lista-li">Proyectos</li>
-              </Link>
-              <Link to={`/`}>
+              </a>
+              <a href={`#contacto`}>
                 <li className="navbar-lista-li">Contacto</li>
-              </Link>
+              </a>
               
                 <span>|</span>
                 {info.length > 0 && 
@@ -158,7 +158,7 @@ const Home = () => {
         </div>
       {info.length > 0 && 
       info.map((item: any) => (
-        <div>
+        <div id="info">
         <Grid container spacing={3} className="container-titulo-navbar">
           <Grid item xs={3} className="titulo-nombre">
             <div>
@@ -192,7 +192,7 @@ const Home = () => {
       </div>
       ))}
       </nav>
-      <section className="section-portafolio">
+      <section id="tecnologias" className="section-portafolio">
         <div className="section-portafolio-tecnologias" >
           <h4 className="titulo-descripcion-titulo-tipo" style={{marginTop:60}}>TECNOLOGIAS</h4>
           <h2 style={{color:'#fff', marginTop:20}}>Que Tecnologias Domino?</h2>
@@ -203,10 +203,10 @@ const Home = () => {
             sapiente nam?
           </p>
           <OutputCard></OutputCard>
-          <OutputCardLenguaje></OutputCardLenguaje>
+          {/* <OutputCardLenguaje></OutputCardLenguaje> */}
         </div>
       </section>
-      <section className="section-proyectos">
+      <section id="proyectos" className="section-proyectos">
         <div className="section-proyectos-container">
           <div className="section-proyectos-titulo"> 
             <h4 className="titulo-descripcion-titulo-tipo" style={{marginTop:60}}>PROYECTOS</h4>
@@ -241,30 +241,27 @@ const Home = () => {
           </div> 
         </div>       
       </section>
-      <section className="section-contact-main">
+      <section id="contacto" className="section-contact-main">
         <div className="section-contact-container">
           <div className="section-contact-title">
-            <h4 className="titulo-descripcion-titulo-tipo" style={{marginTop:60}}>TECNOLOGIAS</h4>
+            <h4 className="titulo-descripcion-titulo-tipo" style={{marginTop:60}}>CONTACTO</h4>
           </div>
           <div>
             <p style={{color:'#fff', width:700, textAlign:'center', marginTop:20, marginBottom:20}}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et
-              nesciunt unde, nulla soluta eum, neque voluptatem fuga pariatur modi
-              hic repudiandae cum. Similique debitis officia molestias voluptates
-              sapiente nam?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et nesciunt unde, nulla soluta eum, neque voluptatem fuga pariatur modihic repudiandae cum. Similique debitis officia molestias voluptates sapiente nam?
             </p>
           </div>
           <div>
           {info.length > 0 && 
           info.map((item: any) => (
-            <Grid container spacing={2}>
-                <Grid item xs={4}>
+            <Grid container spacing={2} sx={{display:"flex", alignContent:"center", justifyItems:"center"}}>
+                <Grid item md={4} sm={12}>
                   <Item><EmailIcon style={{marginRight:12}}/> {item.email} </Item>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item md={4} sm={12}>
                 <Item><WhatsAppIcon style={{marginRight:12}}/> {item.numero} </Item>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item md={4} sm={12}>
                 <Item><LinkedInIcon style={{marginRight:12}}/> Linkedin </Item>
                 </Grid>
             </Grid>
